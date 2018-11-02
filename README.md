@@ -9,4 +9,4 @@ $ python interpreter.py [filename]
 ```shell
 $ python interpreter.py basic.txt
 ```
-output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.out (เช่น basic.txt.out)
+output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.bout (เช่น basic.txt.bout)
