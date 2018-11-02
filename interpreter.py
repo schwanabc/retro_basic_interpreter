@@ -136,7 +136,7 @@ def parse(token):
     while(not is_same_terminal(token, stack_LL1[-1])):
         stack_top = stack_LL1.pop()
         if is_terminal(stack_top):
-            raise Exception("Wrong Grammar: symbol '"+ token + "' is an unexpected terminal symbol") 
+            raise Exception("Wrong Grammar: symbol '"+ token + "' is unexpected (mismatch terminal symbol to parsing table)") 
         rule = get_rule(stack_top, token)
         #print("-->",stack_top,rule, next_set[rule])
         if(next_set[rule] != None):
