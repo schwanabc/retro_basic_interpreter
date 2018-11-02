@@ -21,7 +21,8 @@ Traceback (most recent call last):
   File "interpreter.py", line 152, in convert_to_bcode
     parsed_list.append((parse(token), token))
   File "interpreter.py", line 139, in parse
-    raise Exception("Wrong Grammar: symbol '"+ token + "' is an unexpected terminal symbol") 
-Exception: Wrong Grammar: symbol 'A' is an unexpected terminal symbol
+    raise Exception("Wrong Grammar: symbol '"+ token + "' is unexpected (mismatch terminal symbol to parsing table)") 
+Exception: Wrong Grammar: symbol 'A' is unexpected (mismatch terminal symbol to parsing table)
+
 
 ```
