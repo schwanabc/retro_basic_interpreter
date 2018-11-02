@@ -10,4 +10,16 @@ $ python interpreter.py [filename]
 $ python interpreter.py basic.txt
 ```
 output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.bout (เช่น basic.txt.bout)
-<h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาเพื่อบอกว่า grammar ไม่ถูกต้อง
+<h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาเพื่อบอกว่า grammar ไม่ถูกต้อง เช่น
+``` shell
+$ python interpreter.py wrong.txt
+A = 1
+Traceback (most recent call last):
+  File "interpreter.py", line 169, in <module>
+    bcode_string = convert_to_bcode(scanned_line)
+  File "interpreter.py", line 152, in convert_to_bcode
+    parsed_list.append((parse(token), token))
+  File "interpreter.py", line 139, in parse
+    raise Exception("Wrong Grammar: symbol '"+ token + "' is an unexpected terminal symbol") 
+Exception: Wrong Grammar: symbol 'A' is an unexpected terminal symbol
+```
