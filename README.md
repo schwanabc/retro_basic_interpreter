@@ -11,6 +11,7 @@ $ python interpreter.py basic.txt
 ```
 output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.bout (เช่น basic.txt.bout)
 <h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาเพื่อบอกว่า grammar ไม่ถูกต้อง เช่น</h4>
+
 ``` shell
 $ python interpreter.py wrong.txt
 A = 1
@@ -22,4 +23,5 @@ Traceback (most recent call last):
   File "interpreter.py", line 139, in parse
     raise Exception("Wrong Grammar: symbol '"+ token + "' is an unexpected terminal symbol") 
 Exception: Wrong Grammar: symbol 'A' is an unexpected terminal symbol
+
 ```
