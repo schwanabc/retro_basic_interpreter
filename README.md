@@ -1,5 +1,7 @@
 # Retro Basic Interpreter
-This is a intrepreter of retro basic language for PROG LANG PRIN class.
+This is a intrepreter of retro basic language for PROG LANG PRIN class using python.
+# Required library
+sys
 # วิธีใช้
 เรียกใช้ retro basic interpreter โดย รับ ชื่อไฟล์ เป็น input argument
 ```shell
