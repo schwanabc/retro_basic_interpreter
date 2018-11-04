@@ -156,6 +156,8 @@ def convert_to_bcode(scanned_line):
     for types, value in bcode_list:
         bcode_string = bcode_string + str(bcode_type[types])+ ' ' + str(value) + ' '
     return bcode_string.strip()
+
+
 import sys
 file_name = str(sys.argv[1])
 file = open(file_name, 'r')
