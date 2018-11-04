@@ -99,11 +99,11 @@ def get_bcode(terminal_symbol, value):
         return ("#line", int(value))
     if(terminal_symbol == "id"): 
         return ("#id", ord(value) - ord('A') + 1)
-    if(terminal_symbol == "const"): 
+    if(terminal_symbol == "const"):
         return ("#const", int(value))
     if(terminal_symbol == "IF"): 
         return ("#if", 0)
-    if(terminal_symbol == "GOTO"): 
+    if(terminal_symbol == "GOTO"):
         return ("#goto", int(value))
     if(terminal_symbol == "PRINT"): 
         return ("#print", 0)
@@ -121,8 +121,7 @@ def get_bcode(terminal_symbol, value):
 def generate_bcode(parsed_list):
     bcode_list = []
     for i in range(len(parsed_list)):
-#         if(parsed_list[i-1][0] == "GOTO" and i>0):
-#             continue
+
         #include first line_num case
         if(parsed_list[i][0] not in ["GOTO","line_num"] or i == 0):
             bcode_list.append(get_bcode(parsed_list[i][0], parsed_list[i][1]))
@@ -141,8 +140,11 @@ def parse(token):
         #print("-->",stack_top,rule, next_set[rule])
         if(next_set[rule] != None):
             stack_LL1.extend(next_set[rule][::-1])
-        #print(stack_LL1)
-        
+        #constraint checking
+    if(stack_LL1[-1] == 'line_num' and not 1 <=int(token) <= 1000):
+        raise Exception("Wrong Grammar: value of line_num is not in appropriate range")
+    if(stack_LL1[-1] == 'const' and not 0 <=int(token) <= 100):
+        raise Exception("Wrong Grammar: value of const is not in appropriate range") 
     return stack_LL1.pop()
     
 #convert scanned line to bcode
