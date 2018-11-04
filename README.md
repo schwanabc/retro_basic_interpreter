@@ -12,7 +12,7 @@ $ python interpreter.py [filename]
 $ python interpreter.py basic.txt
 ```
 output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.bout (เช่น basic.txt.bout)
-<h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาบอกผู้ใช้เพื่อบอกว่า grammar ไม่ถูกต้อง เช่น</h4>
+<h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาบอกผู้ใช้เพื่อบอกว่า grammar ของ file นำเข้าไม่ถูกต้อง เช่น</h4>
 
 ``` shell
 $ python interpreter.py wrong.txt
