@@ -1,21 +1,21 @@
 # Retro Basic Interpreter
-This is a intrepreter of retro basic language for PROG LANG PRIN class using python.
+This is a intrepreter of retro basic language for PROG LANG PRIN class using python 3.
 # Required library
 sys
 # วิธีใช้
 เรียกใช้ retro basic interpreter โดย รับ ชื่อไฟล์ เป็น input argument
 ```shell
-$ python interpreter.py [filename]
+$ python3 interpreter.py [filename]
 ```
 เช่น 
 ```shell
-$ python interpreter.py basic.txt
+$ python3 interpreter.py basic.txt
 ```
 output ซึ่งอยู่ในรูปแบบ bcode จะอยู่ใน filename.bout (เช่น basic.txt.bout)
 <h4>หาก Grammar ใน input file ไม่ถูกต้อง จะมี Exception ถูก raise ขึ้นมาบอกผู้ใช้เพื่อบอกว่า grammar ของ file นำเข้าไม่ถูกต้อง เช่น</h4>
 
 ``` shell
-$ python interpreter.py wrong.txt
+$ python3 interpreter.py wrong.txt
 A = 1
 Traceback (most recent call last):
   File "interpreter.py", line 169, in <module>
